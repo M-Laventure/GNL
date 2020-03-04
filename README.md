@@ -1,4 +1,4 @@
-# Get Next Line Project
+# Get_Next_Line
 
 GNL is a project consisting in writing the function get_next_line which will return the next_line in a file while keeping the current position through the file.
 
