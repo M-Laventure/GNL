@@ -27,8 +27,8 @@ gcc -Wall -Wextra -Werror -I libft/includes -o main.o -c main.c
 gcc -o gnl main.o get_next_line.o -I libft/includes -L libft/ -lft
 ```
 
-# Testing
+### Testing
 
-Make sure the tests files are into the repo, feel free to create your own text files.
+Make sure the tests files are into the repo, feel free to create your own test.
 
-To run the executable : ./gnl testfile.txt
+To run the executable : ```./gnl testfile.txt```
