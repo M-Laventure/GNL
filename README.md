@@ -1,28 +1,34 @@
 # Get Next Line Project
 
-Moulitest: [![Build Status](https://travis-ci.org/42dannywillems/42_get.next.line.svg?branch=master)](https://travis-ci.org/42dannywillems/42_get.next.line)
+GNL is a project consisting in writing the function get_next_line which will return the next_line in a file while keeping the current position through the file.
 
-This project consist of writing a function get_next_line which get the next line
-in a file.
+These are some constraints or additional feature for the project:
 
-There are some features this function must implement:
-* we only use [libft](https://github.com/42dannywillems/42_libft).
-* we need to implement a buffer. We can't come back in the file descriptor. We can't move in the
-  file descriptor. We can only use *read*, *free*, *malloc*. No call to lseek.
-* we can't use global variable.
-* we can't use FILE structure. We need to create one.
-* we can read multiple file descriptors at the same time (which implies a
+
+* We cannot come back in the file descriptor. You can only move forward in the
+  file descriptor. 
+* The only functions allowed are *read*, *free*, *malloc*. *lseek* is forbidden.
+* No global variable.
+* you can read multiple file descriptors at the same time (which implies a
   buffer).
-* we can't have memory leaks: every malloc must be freed.
-* the buffer size (use by read) can be changed.
+* Memory leaks are not allowed.
+* The size of the buffer can be modified.
 
-## How to compile and test it
+## How to run and test get_next_line.c
 
-First, add a main.c with some tests
+Clone this repo : git clone https://github.com/M-Laventure/GNL
+	
+Follow these steps in your Shell 
 
 ```Shell
 make -C libft/ fclean && make -C libft
 gcc -Wall -Wextra -Werror -I libft/includes -o get_next_line.o -c get_next_line.c
 gcc -Wall -Wextra -Werror -I libft/includes -o main.o -c main.c
-gcc -o test_gnl main.o get_next_line.o -I libft/includes -L libft/ -lft
+gcc -o gnl main.o get_next_line.o -I libft/includes -L libft/ -lft
 ```
+
+# Testing
+
+Make sure the tests files are into the repo, feel free to create your own text files.
+
+To run the executable : ./gnl testfile.txt
